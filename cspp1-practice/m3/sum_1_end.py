@@ -1,7 +1,9 @@
-end=int(input("enter number"))
-sum=0
-i=1
-for i in range(1,end+1,1):
-    sum=sum+i
-print(sum)
-    
+
+num = 10
+while True:
+    if num < 7:
+        print('Breaking out of loop')
+        break
+    print(num)
+    num -= 1
+print('Outside of loop')
