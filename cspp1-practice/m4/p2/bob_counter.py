@@ -1,4 +1,4 @@
-s=input("Type the string")
+s=input()
 m=len(s)
 b="bob"
 n=len(b)
