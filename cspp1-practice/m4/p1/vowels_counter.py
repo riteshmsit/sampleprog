@@ -1,9 +1,9 @@
-s=input("")
-i=0
-l=len(s)
-c=0
-while(i<l):
-    if(s[i]=='a' or s[i]=='e' or s[i]=='o' or s[i]=='u' or s[i]=='i'):
-        c=c+1
-    i=i+1
-print(c)
+S = input("")
+I = 0
+L = len(S)
+C = 0
+while (I < L):
+    if(S[I] == 'a' or S[I] == 'e' or S[I] == 'o' or S[I] == 'u' or S[I] == 'i'):
+        C = C+1
+    I = I+1
+print(C)
