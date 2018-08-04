@@ -19,4 +19,5 @@ if N > 0:
         P = P * I
         N = N // 10
     print(P)
-    
+if N == 0
+    print(0)
