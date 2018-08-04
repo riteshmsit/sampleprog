@@ -1,15 +1,22 @@
-'''
-Given a  number int_input, find the product of all the digits
-example: 
-	input: 123
-	output: 6
-'''
-def main():
-    '''
-    Read any number from the input, store it in variable int_input.
-    '''
-    int_input = int(input())
-
-
-if __name__ == "__main__":
-    main()
+"""
+Third program
+"""
+N = int(input())
+I = 1
+P = 1
+if N < 0:
+    N = abs(N)
+    while N != 0:
+        I = N % 10
+        P = P * I
+        N = N//10
+    P = P * -1
+    print(P)
+    N = N * -1
+if N > 0:
+    while N != 0:
+        I = N % 10
+        P = P * I
+        N = N // 10
+        print(P)
+    
