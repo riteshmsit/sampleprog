@@ -4,9 +4,11 @@ Second assignment program
 S = input()
 I = 0
 A = len(S)
-while I <= A:
+Q = ""
+while I < A:
     if S[I] == '!' or S[I] == '@' or S[I] == '#' or S[I] == '$' or S[I] == '%' or S[I] == '^' or S[I] == '&' or S[I] == '*':
-        print(" ")
+        Q = Q + " "
     else:
-        print(S[I])
+        Q = Q + S[I]
     I = I + 1
+print(Q)
