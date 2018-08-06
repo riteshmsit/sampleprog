@@ -13,5 +13,3 @@ while abs(ANS**2 - A) >= E:
         H = ANS
     ANS = (H + L)/2.0
 print(ANS)
-
-
