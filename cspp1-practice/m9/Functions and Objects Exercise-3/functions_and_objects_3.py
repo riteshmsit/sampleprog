@@ -1,6 +1,6 @@
-def square(v):
-    v=v**2
-    return v
+def square(val):
+    val=val**2
+    return val
     
 def apply_to_each(L, f):
     for i in range(len(L)):
