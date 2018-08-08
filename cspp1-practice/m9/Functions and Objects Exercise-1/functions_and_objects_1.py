@@ -14,7 +14,7 @@ def main():
     data = input()
     data = data.split()
     list1 = []
-    for j in l:
+    for j in data:
         list1.append(int(j))
     apply_to_each(list1, abs)
 
