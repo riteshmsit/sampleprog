@@ -11,12 +11,10 @@ def iterPower(base, exp):
  
     returns: int or float, base^exp
     '''
-    i=0
-    powv=1
-    while(i<exp):
-    	powv=powv*base
-    	i=i+1
-    return int(powv)
+    if :
+        return 1
+    else:
+        return base*exp(n)
     
 
 
