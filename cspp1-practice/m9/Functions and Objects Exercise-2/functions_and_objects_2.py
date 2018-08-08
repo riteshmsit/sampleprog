@@ -4,9 +4,9 @@
 """
 function 2
 """
-def inc(val):
-    val+=1
-    return val
+def inc(v):
+    v+=1
+    return v
 def apply_to_each(L, f):
     for i in range(len(L)):
         L[i]=f(L[i])
