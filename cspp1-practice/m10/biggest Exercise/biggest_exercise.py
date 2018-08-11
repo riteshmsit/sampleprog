@@ -16,9 +16,6 @@ def biggest(aDict):
             t=i
     return t
 
-    
-
-
 def main():
     n=input()
     aDict={}
