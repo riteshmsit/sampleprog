@@ -17,6 +17,8 @@ def is_straight(hand):
     face_val=[]
     hand=[]
     for i in range(len(hand)):
+        if hand[i][0]=='T' or hand[i][0]=='t':
+            face_val[i]=10
         if hand[i][0]=='J' or hand[i][0]=='j':
             face_val[i]=11
         if hand[i][0]=='K' or hand[i][0]=='k':
