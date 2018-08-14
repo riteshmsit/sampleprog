@@ -23,7 +23,6 @@ def is_straight(hand):
             l.append(int(my_dict[ch1]))
         else:
             l.append(int(ch1))
-    print(l)
     minimum = min(l)
     for i in range(len(l)):
         if minimum not in l:
