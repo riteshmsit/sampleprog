@@ -31,7 +31,7 @@ def is_straight(hand):
         face_val.append(face_val)
     count=0
     for i in range(len(face_val)-1):
-        if face_val[i]-face_val[i+1]==1:
+        if (face_val[i]-face_val[i+1])==1:
             count=count+1
     if count==(len(face_val)-1):
         return True
@@ -53,7 +53,7 @@ def is_flush(hand):
     for i in range(len(hand)):
         if hand[i][1]==hand[i+1][1]:
             count=count+1
-    if count==len(hand)-1:
+    if count==4:
         return True
     else:
         return False
