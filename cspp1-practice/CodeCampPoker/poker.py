@@ -22,13 +22,16 @@ def is_straight(hand):
         if ch1 in my_dict:
             l.append(my_dict[ch1]) 
         else:
-            l.append(ch1)
+            l.append(int(ch1)
     minimum = min(l)
+    flag = 1
     for i in range(len(l)):
         if minimum not in l:
-            return "False"
+            flag = 0
         minimum += 1
-    return "True"
+    if flag = 1:
+        return 1
+    return 0
 
         
 
@@ -48,9 +51,9 @@ def is_flush(hand):
         if hand[i][1]==hand[i+1][1]:
             count=count+1
     if count==len(hand)-1:
-        return True
+        return 1
     else:
-        return False
+        return 0
 
 
 def hand_rank(hand):
@@ -77,7 +80,7 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    if (is_straight(hand) and is_flush(hand)):
+    if is_straight(hand) and is_flush(hand):
         return 3
     if (is_flush(hand)):
         return 2
