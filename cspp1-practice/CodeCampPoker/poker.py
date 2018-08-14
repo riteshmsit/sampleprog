@@ -15,7 +15,7 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     
-    my_dict={'T':10,'J':11,'Q':12,'K':13,'A':14}
+    my_dict = {'T':10,'J':11,'Q':12,'K':13,'A':14}
     l = []
     for i in range(len(hand)):
         #print(ch)
@@ -39,10 +39,10 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     face_val=[]
-    count=0
+    count = 0
     for i in range(len(hand)-1):
-        if hand[i][1]==hand[i+1][1]:
-            count=count+1
+        if hand[i][1] == [i+1][1]:
+            count = count+1
     if count==len(hand)-1:
         return 1
     else:
@@ -75,12 +75,11 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
         return 3
-    if (is_flush(hand)):
+    if is_flush(hand):
         return 2
-    if (is_straight(hand)):
+    if is_straight(hand):
         return 1
-    else:
-        return 0
+    return 0
 
 def poker(hands):
     '''
