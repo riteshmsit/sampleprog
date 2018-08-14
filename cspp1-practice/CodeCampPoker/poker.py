@@ -16,7 +16,6 @@ def is_straight(hand):
     '''
     face_val=[]
     hand=[]
-    t=[]
     for i in range(len(hand)):
         if hand[i][0]=='T' or hand[i][0]=='t':
             face_val[i]=10
@@ -30,10 +29,9 @@ def is_straight(hand):
             face_val[i]=14
         face_val=int(face_val)
         face_val.append(face_val)
-    t.sort(reverse=True)
     count=0
     for i in range(len(face_val)-1):
-        if face_val[i]==face_val[i+1]:
+        if face_val[i]-face_val[i+1]==1:
             count=count+1
     if count==(len(face_val)-1):
         return True
