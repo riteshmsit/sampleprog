@@ -27,14 +27,14 @@ def is_straight(hand):
     flag = 1
     for i in range(len(l)):
         if m not in l:
-            flag = 0
-        m = m + 1
-    if flag = 1:
-        return 1
-    return 0
+            return 0
+        m += 1
+    return 1
 
         
-
+1-practice\CodeCampPoker\poker.py", line 26
+    m = min(l)
+    ^
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
