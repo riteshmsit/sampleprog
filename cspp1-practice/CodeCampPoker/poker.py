@@ -49,7 +49,7 @@ def is_flush(hand):
     for i in range(len(hand)):
         if hand[i][1]==hand[i+1][1]:
             count=count+1
-    if count==len(hand-1):
+    if count==len(hand)-1:
         return True
     else:
         return False
