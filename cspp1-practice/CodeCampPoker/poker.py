@@ -39,9 +39,8 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     face_val=[]
-    hand=[]
     count=0
-    for i in range(len(hand)):
+    for i in range(len(hand)-1):
         if hand[i][1]==hand[i+1][1]:
             count=count+1
     if count==len(hand)-1:
