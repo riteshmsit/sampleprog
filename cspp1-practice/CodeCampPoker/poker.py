@@ -16,27 +16,21 @@ def is_straight(hand):
     '''
     face_val=[]
     hand=[]
-    for i in range(len(hand)):
-        if hand[i][0]=='T' or hand[i][0]=='t':
-            face_val[i]=10
-        if hand[i][0]=='J' or hand[i][0]=='j':
-            face_val[i]=11
-        if hand[i][0]=='K' or hand[i][0]=='k':
-            face_val[i]=13
-        if hand[i][0]=='Q' or hand[i][0]=='q':
-            face_val[i]=12
-        if hand[i][0]=='A' or hand[i][0]=='a':
-            face_val[i]=14
-        face_val=int(face_val)
-        face_val.append(face_val)
-    count=0
-    for i in range(len(face_val)-1):
-        if (face_val[i]-face_val[i+1])==1:
-            count=count+1
-    if count==(len(face_val)-1):
-        return True
-    return False
+    my_dict={'T':10,'J':11,'Q':12,'K':13,'T':14}
+    l = []
+    for ch1, ch2 in hand:
+        if ch1 in my_dict:
+            l.append(my_dict[ch1]) 
+        else:
+            l.append(ch1)
+    minimum = min(l)
+    for i in range(len(l)):
+        if minimum not in l:
+            return "False"
+        minimum += 1
+    return "True"
 
+        
 
 def is_flush(hand):
     '''
@@ -53,7 +47,7 @@ def is_flush(hand):
     for i in range(len(hand)):
         if hand[i][1]==hand[i+1][1]:
             count=count+1
-    if count==4:
+    if count==len(hand)-1:
         return True
     else:
         return False
