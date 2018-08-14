@@ -20,21 +20,17 @@ def is_straight(hand):
     l = []
     for ch1, ch2 in hand:
         if ch1 in my_dict:
-            l.append(my_dict[ch1]) 
+            l.append(int(my_dict[ch1]))
         else:
-            l.append(int(ch1)
-    m = min(l)
+            l.append(int(ch1))
+    minimum_val = int(min(l))
     flag = 1
     for i in range(len(l)):
-        if m not in l:
+        if minimum_value not in l:
             return 0
-        m += 1
+        minimum_value += 1
     return 1
-
-        
-1-practice\CodeCampPoker\poker.py", line 26
-    m = min(l)
-    ^
+    #print(l)
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -118,3 +114,4 @@ if __name__ == "__main__":
         HANDS.append(ha)
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
+    #print(is_straight(['1D', 'AD', 'KS', 'QC']))
