@@ -27,6 +27,8 @@ def is_straight(hand):
             face_val[i]=12
         if hand[i][0]=='A' or hand[i][0]=='a':
             face_val[i]=14
+        face_val=int(face_val)
+        face_val.append(face_val)
     count=0
     for i in range(len(face_val)-1):
         if face_val[i]==face_val[i+1]:
