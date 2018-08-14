@@ -23,6 +23,7 @@ def is_straight(hand):
             l.append(int(my_dict[ch1]))
         else:
             l.append(int(ch1))
+    print(l)
     minimum_val = int(min(l))
     flag = 1
     for i in range(len(l)):
@@ -113,5 +114,5 @@ if __name__ == "__main__":
         ha = line.split(" ")
         HANDS.append(ha)
     # test the poker function to see how it works
-    print(' '.join(poker(HANDS)))
-    #print(is_straight(['1D', 'AD', 'KS', 'QC']))
+    #print(' '.join(poker(HANDS)))
+    print(is_straight(['1D', 'AD', 'KS', 'QC']))
