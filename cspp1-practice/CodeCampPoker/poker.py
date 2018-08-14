@@ -17,12 +17,12 @@ def is_straight(hand):
     
     my_dict={'T':10,'J':11,'Q':12,'K':13,'A':14}
     l = []
-    for ch1,ch2 in hand:
+    for i in range(len(hand)):
         #print(ch)
-        if ch1 in my_dict:
-            l.append(int(my_dict[ch1]))
+        if hand[i][0] in my_dict:
+            l.append(int(my_dict[hand[i][0]]))
         else:
-            l.append(int(ch1))
+            l.append(int(hand[i][0]))
     minimum = min(l)
     for i in range(len(l)):
         if minimum not in l:
@@ -80,6 +80,8 @@ def hand_rank(hand):
         return 2
     if (is_straight(hand)):
         return 1
+    else:
+        return 0
 
 def poker(hands):
     '''
@@ -99,7 +101,15 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    return max(hands, key=hand_rank)
+    #return max(hands,key=hand_rank)
+    m = 0
+    maximum = []
+    for hand in hands:
+        if int(hand_rank(hand)) >= m:
+            m = hand_rank(hand)
+            maximum = hand
+    return maximum
+            
 
 if __name__ == "__main__":
     # read the number of test cases
@@ -112,4 +122,4 @@ if __name__ == "__main__":
         HANDS.append(ha)
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
-    #print(is_straight(['1D', 'AD', 'KS', 'QC']))
+    #print(is_straight(['8D', '9D', 'TS', 'JC']))
