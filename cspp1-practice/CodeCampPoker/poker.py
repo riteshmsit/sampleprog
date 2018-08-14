@@ -14,24 +14,22 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    face_val=[]
-    hand=[]
-    my_dict={'T':10,'J':11,'Q':12,'K':13,'T':14}
+    
+    my_dict={'T':10,'J':11,'Q':12,'K':13,'A':14}
     l = []
-    for ch1, ch2 in hand:
+    for ch1,ch2 in hand:
+        #print(ch)
         if ch1 in my_dict:
             l.append(int(my_dict[ch1]))
         else:
             l.append(int(ch1))
     print(l)
-    minimum_val = int(min(l))
-    flag = 1
+    minimum = min(l)
     for i in range(len(l)):
-        if minimum_value not in l:
+        if minimum not in l:
             return 0
-        minimum_value += 1
+        minimum += 1
     return 1
-    #print(l)
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -114,5 +112,5 @@ if __name__ == "__main__":
         ha = line.split(" ")
         HANDS.append(ha)
     # test the poker function to see how it works
-    #print(' '.join(poker(HANDS)))
-    print(is_straight(['1D', 'AD', 'KS', 'QC']))
+    print(' '.join(poker(HANDS)))
+    #print(is_straight(['1D', 'AD', 'KS', 'QC']))
