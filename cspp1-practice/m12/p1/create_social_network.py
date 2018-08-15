@@ -2,7 +2,7 @@
     Assignment-1 Create Social Network
 '''
 
-def create_social_network(st,lines,l):
+def create_social_network(data):
     '''
         The data argument passed to the function is a string
         It represents simple social network data
@@ -31,29 +31,33 @@ def create_social_network(st,lines,l):
         Return a empty dictionary if the string format of the data is invalid
         Empty dictionary is not None, it is a dictionary with no keys
     '''
-    Adict={}
-    b=st.split("follows ")
-    l=[]
-    l=l[str]
-    for i in range(len(st)):
-        if l[0] not in Adict:
-            Adict[l[0]]= [l[1]]
-        else:
-            Adict[l[0]].append(l[1])
-    return Adict
+
+    # remove the pass below and start writing your code
+    data=data[:-1]
+    a=data.split("\n")
+    d={}
+    if " follows " in data:
+        for i in a:
+            user_data=i.split("\n")
+            user_friends=user_data[1].split(",")
+            d[user_data[0]]=user_friends
+    return d
+
+
 
 
 def main():
     '''
         handling testcase input and printing output
     '''
-    st = ''
+    string = ''
     lines = int(input())
     for i in range(lines):
-        st += input()
-        st+=' '
-        i=i+1
-    print(create_social_network(st,lines))
+        i += 1
+        string += input()
+        string += '\n'
+
+    print(create_social_network(string))
 
 if __name__ == "__main__":
     main()
