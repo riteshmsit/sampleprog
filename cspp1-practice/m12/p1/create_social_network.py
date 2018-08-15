@@ -37,8 +37,8 @@ def create_social_network(data):
     a=data.split("\n")
     d={}
     if " follows " in data:
-        for i in a:
-            user_data=i.split("\n")
+        for user in a:
+            user_data=user.split("\n")
             user_friends=user_data[1].split(",")
             d[user_data[0]]=user_friends
     return d

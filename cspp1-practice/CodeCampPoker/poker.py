@@ -3,7 +3,51 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-
+def dict_fun(hand):
+    d = {}
+    for i in range(len(hand)):
+        if hand[i][0] in d:
+            d[hand[i][0]] +=1
+        else:
+            d[hand[i][0]] = 1
+    return d
+def is_fourofakind(hand):
+    flag = 0
+    dict_four = {}
+    dict_four = dict_fun(hand)
+    if len(dict_four) == 2:
+        if 1 in dict_four.values() and 4 in dict_four.values():
+            flag = 1
+    return flag
+def is_fullhouse(hand):
+    flag = 0
+    dict_full = {}
+    dict_full = dict_fun(hand)
+    if len(dict_full) == 2:
+        if 2 in dict_full.values() and 3 in dict_full.values():
+            flag = 1
+    return flag
+def is_threeofakind(hand):
+    flag = 0
+    dict_three = {}
+    dict_three = dict_fun(hand)
+    if len(dict_three) == 3 and 3 in dict_three.values():
+        flag = 1
+    return flag
+def is_twopair(hand):
+    flag = 0
+    dict_twopair = {}
+    dict_twopair = dict_fun(hand)
+    if len(dict_twopair) == 3 and 2 in dict_twopair.values():
+        flag = 1
+    return flag
+def is_onepair(hand):
+    flag = 0
+    dict_onepair = {}
+    dict_onepair = dict_fun(hand)
+    if len(dict_onepair) == 4 and 2 in dict_onepair.values():
+        flag = 1
+    return flag
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -15,10 +59,9 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     
-    my_dict={'T':10,'J':11,'Q':12,'K':13,'A':14}
+    my_dict = {'T':10,'J':11,'Q':12,'K':13,'A':14}
     l = []
     for i in range(len(hand)):
-        #print(ch)
         if hand[i][0] in my_dict:
             l.append(int(my_dict[hand[i][0]]))
         else:
@@ -74,13 +117,22 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
+        return 9
+    if is_fourofakind(hand):
+        return 8
+    if is_fullhouse(hand):
+        return 7
+    if is_flush(hand):
+        return 6
+    if is_straight(hand):
+        return 5
+    if is_threeofakind(hand):
+        return 4
+    if is_twopair(hand):
         return 3
-    if (is_flush(hand)):
+    if is_onepair(hand):
         return 2
-    if (is_straight(hand)):
-        return 1
-    else:
-        return 0
+    return 1
 
 def poker(hands):
     '''
@@ -101,14 +153,7 @@ def poker(hands):
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
     #return max(hands,key=hand_rank)
-    m = 0
-    maximum = []
-    for hand in hands:
-        if int(hand_rank(hand)) >= m:
-            m = hand_rank(hand)
-            maximum = hand
-    return maximum
-            
+    return max(hands, key=hand_rank)
 
 if __name__ == "__main__":
     # read the number of test cases
@@ -122,3 +167,8 @@ if __name__ == "__main__":
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
     #print(is_straight(['8D', '9D', 'TS', 'JC']))
+    #print(is_fourofakind(['AD', 'AH', 'AC', '2S', 'TD']))
+
+            
+
+    
