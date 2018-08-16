@@ -31,7 +31,7 @@ def is_threeofakind(hand):
 def is_twopair(hand):
     dict_twopair = {}
     dict_twopair = dict_fun(hand)
-    return len(dict_twopair) == 4 and 2 in dict_twopair.values()
+    return len(dict_twopair) == 3 and 2 in dict_twopair.values()
         
     
 def is_onepair(hand):
