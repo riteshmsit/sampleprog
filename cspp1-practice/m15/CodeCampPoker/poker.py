@@ -144,14 +144,16 @@ def poker(hands):
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
     #return max(hands,key=hand_rank)
-    m = 0
-    maximum = []
     for hand in hands:
-        if int(hand_rank(hand)) >= m:
-            m = hand_rank(hand)
-            maximum = hand
-    return maximum
-
+        if int(hand_rank(hand)) == int(hand_rank(hand+1)):
+            for s in hand:
+                s1+=hand[s][0]
+            for q in (hand+1):
+                s2+=hand[s][0]
+        if s1>s2:
+            return hand
+        return hand+1
+    return max(hands,key=hand_rank)
 
 if __name__ == "__main__":
     # read the number of test cases
