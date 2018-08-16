@@ -106,7 +106,8 @@ def hand_rank(hand):
     # the second best would be a flush with the return value 2
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
-    # max in poker function uses these return values to select the best hand
+    # max in poker function uses these return values to select the best han
+
     if is_straight(hand) and is_flush(hand):
         return 9
     if is_fourofakind(hand):
@@ -144,9 +145,28 @@ def poker(hands):
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
     #return max(hands,key=hand_rank)
+    sum=[]
+    sum1=[]
+    sum2=[]
+    for hand in hands:
+        for i in hand:
+            sum[i]=hand_rank(hand[i])
+        for j in sum:
+            if sum[j]==sum[j+1]:
+                for a in sum[j]:
+                    sum1[a]+=hand[a][0]
+                for b in sum[j+1]:
+                    sum2[b]+=hand[b][0]
+            if sum1[a]>sum2[b]:
+                print(sum1[a])
+            if sum1[a]>sum2[b]:
+                print(sum2[a])
+
+
+
     
     return max(hands,key=hand_rank)
-
+hadn
 if __name__ == "__main__":
     # read the number of test cases
     COUNT = int(input())
