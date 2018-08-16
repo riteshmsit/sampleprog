@@ -37,7 +37,7 @@ def is_twopair(hand):
 def is_onepair(hand):
     dict_onepair = {}
     dict_onepair = dict_fun(hand)
-    return len((dict_onepair) == 4 and 2 in dict_onepair.values())
+    return len(dict_onepair) == 4 and 2 in dict_onepair.values()
         
 def is_straight(hand):
     '''
