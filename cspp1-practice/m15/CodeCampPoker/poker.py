@@ -145,7 +145,7 @@ def poker(hands):
     # max uses the rank returned by hand_rank and returns the best hand
     #return max(hands,key=hand_rank)
     for hand in hands:
-        if hand_rank(hand) == hand_rank(hand+1):
+        if hand_rank(hand) - hand_rank(hand+1)==0:
             for s in hand:
                 s1+=hand[s][0]
             for q in (hand+1):
