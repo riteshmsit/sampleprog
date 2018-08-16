@@ -3,42 +3,7 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-def dict_fun(hand):
-    d = {}
-    for i in range(len(hand)):
-        if hand[i][0] in d:
-            d[hand[i][0]] +=1
-        else:
-            d[hand[i][0]] = 1
-    return d
-def is_fourofakind(hand):
-    dict_fourpair = {}
-    dict_fourpair = dict_fun(hand)
-    return len(dict_fourpair) == 2 and 4 in dict_fourpair.values()
-        
-def is_fullhouse(hand):
-    dict_fullhouse = {}
-    dict_fullhouse = dict_fun(hand)
-    return len(dict_fullhouse) == 2 and 3 in dict_fullhouse.values() and 2 in dict_fullhouse.values()
-        
-    
-def is_threeofakind(hand):
-    dict_threepair = {}
-    dict_threepair = dict_fun(hand)
-    return len(dict_threepair) == 3 and 3 in dict_threepair.values()
-        
-    
-def is_twopair(hand):
-    dict_twopair = {}
-    dict_twopair = dict_fun(hand)
-    return len(dict_twopair) == 3 and 2 in dict_twopair.values()
-        
-    
-def is_onepair(hand):
-    dict_onepair = {}
-    dict_onepair = dict_fun(hand)
-    return len(dict_onepair) == 4 and 2 in dict_onepair.values()
-        
+
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -49,20 +14,15 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    
-    my_dict = {'T':10,'J':11,'Q':12,'K':13,'A':14}
-    l = []
-    for i in range(len(hand)):
-        if hand[i][0] in my_dict:
-            l.append(int(my_dict[hand[i][0]]))
-        else:
-            l.append(int(hand[i][0]))
-    minimum = min(l)
-    for i in range(len(l)):
-        if minimum not in l:
-            return 0
-        minimum += 1
-    return 1
+    face_values = get_onlyfacevalues(hand)
+    # 2, 3, 4, 5, 6
+    # 10, 11, 12, 13, 14
+    face_set = set(sorted(face_values))
+    if face_set == {2, 3, 4, 5, 14}:
+        face_set = {1, 2, 3, 4, 5}
+
+    return len(face_set) == 5 and max(face_set) - min(face_set) == 4
+
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -72,16 +32,90 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    face_val=[]
-    count=0
-    for i in range(len(hand)-1):
-        if hand[i][1]==hand[i+1][1]:
-            count=count+1
-    if count==len(hand)-1:
-        return 1
-    else:
-        return 0
+    suits_set = set()
+    for c, s in hand:
+        suits_set.add(s)
 
+    return len(suits_set) == 1
+
+def is_fourofakind(hand):
+
+    face_values = get_onlyfacevalues(hand)
+
+    for each_face in face_values:
+        if face_values.count(each_face) == 4:
+            return True
+
+    return False
+
+def is_fullhouse(hand):
+    face_values = get_onlyfacevalues(hand)
+
+    if (face_values.count(face_values[0]) == 3 and face_values.count(face_values[len(face_values)-1]) == 2) or (face_values.count(face_values[0]) == 2 and face_values.count(face_values[len(face_values)-1]) == 3):
+        return True
+
+    return False
+
+def is_threeofakind(hand):
+    face_list = get_onlyfacevalues(hand)
+
+    if len(set(face_list)) == 3:
+        for each_face in face_list:
+            if face_list.count(each_face) == 3:
+                return True
+
+    return False
+
+def is_twopair(hand):
+    face_list = get_onlyfacevalues(hand)
+    if len(set(face_list)) == 3:
+        count = 0
+        for each_face in set(face_list):
+            if face_list.count(each_face) == 2:
+                count += 1
+        if count == 2:
+            return True
+
+    return False
+
+def is_onepair(hand):
+    face_list = get_onlyfacevalues(hand)
+    if len(set(face_list)) == 4:
+        count = 0
+        for each_face in set(face_list):
+            if face_list.count(each_face) == 2:
+                count += 1
+        if count == 1:
+            return True
+
+    return False
+
+def is_highcard(hand):
+    return len(set(get_onlyfacevalues(hand))) == 5
+
+def get_onlyfacevalues(hand):
+    face_values = []
+    index_str = '--23456789TJQKA'
+    for c, s in hand:
+        face_values.append(index_str.index(c))
+
+    return sorted(face_values)
+
+def get_handrank(hand, size):
+    face_values = get_onlyfacevalues(hand)
+
+    if size == 1:
+        return 1/100 * max(face_values)
+
+    for each_hand in face_values:
+        if face_values.count(each_hand) == 2:
+            return 1/100 * int(each_hand)
+
+    return 0
+
+def get_suitrank(hand):
+    face_values = get_onlyfacevalues(hand)
+    return 1/100 * sum(face_values)
 
 def hand_rank(hand):
     '''
@@ -106,10 +140,13 @@ def hand_rank(hand):
     # the second best would be a flush with the return value 2
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
-    # max in poker function uses these return values to select the best han
+    # max in poker function uses these return values to select the best hand
+
+
+    # print(is_highcard(hand))
 
     if is_straight(hand) and is_flush(hand):
-        return 9
+        return 9 +get_suitrank(hand)
     if is_fourofakind(hand):
         return 8
     if is_fullhouse(hand):
@@ -123,8 +160,10 @@ def hand_rank(hand):
     if is_twopair(hand):
         return 3
     if is_onepair(hand):
-        return 2
-    return 1
+        return 2 + get_handrank(hand, 2)
+    if is_highcard(hand):
+        return 1 + get_handrank(hand, 1)
+    return 0
 
 def poker(hands):
     '''
@@ -144,11 +183,8 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    #return max(hands,key=hand_rank)
-   
+    return max(hands, key=hand_rank)
 
-    
-    return max(hands,key=hand_rank)
 if __name__ == "__main__":
     # read the number of test cases
     COUNT = int(input())
@@ -160,9 +196,3 @@ if __name__ == "__main__":
         HANDS.append(ha)
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
-    #print(is_straight(['8D', '9D', 'TS', 'JC']))
-    #print(is_fourofakind(['AD', 'AH', 'AC', '2S', 'TD']))
-
-            
-
-    
