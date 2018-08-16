@@ -12,42 +12,39 @@ def dict_fun(hand):
             d[hand[i][0]] = 1
     return d
 def is_fourofakind(hand):
-    flag = 0
-    dict_four = {}
-    dict_four = dict_fun(hand)
-    if len(dict_four) == 2:
-        if 1 in dict_four.values() and 4 in dict_four.values():
-            flag = 1
-    return flag
+   
+    dict_fourpair = {}
+    dict_fourpair = dict_fun(hand)
+    return len(dict_fourpair) == 2 and 4 in dict_fourpair.values():
+        
+    
 def is_fullhouse(hand):
-    flag = 0
-    dict_full = {}
-    dict_full = dict_fun(hand)
-    if len(dict_full) == 2:
-        if 2 in dict_full.values() and 3 in dict_full.values():
-            flag = 1
-    return flag
+    
+    dict_fullhouse = {}
+    dict_fullhouse = dict_fun(hand)
+    return len(dict_fullhouse) == 2 and 3 in dict_fullhouse.values() and 2 in dict_fullhouse.values():
+        
+    
 def is_threeofakind(hand):
     flag = 0
-    dict_three = {}
-    dict_three = dict_fun(hand)
-    if len(dict_three) == 3 and 3 in dict_three.values():
-        flag = 1
-    return flag
+    dict_threepair = {}
+    dict_threepair = dict_fun(hand)
+    return len(dict_threepair) == 3 and 3 in dict_threepair.values():
+        
+    
 def is_twopair(hand):
-    flag = 0
+    
     dict_twopair = {}
     dict_twopair = dict_fun(hand)
-    if len(dict_twopair) == 3 and 2 in dict_twopair.values():
-        flag = 1
-    return flag
+    return len(dict_twopair) == 3 and 2 in dict_twopair.values():
+        
+    
 def is_onepair(hand):
-    flag = 0
+    
     dict_onepair = {}
     dict_onepair = dict_fun(hand)
-    if len(dict_onepair) == 4 and 2 in dict_onepair.values():
-        flag = 1
-    return flag
+    return len(dict_onepair) == 4 and 2 in dict_onepair.values():
+        
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
