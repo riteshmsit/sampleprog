@@ -12,34 +12,29 @@ def dict_fun(hand):
             d[hand[i][0]] = 1
     return d
 def is_fourofakind(hand):
-   
     dict_fourpair = {}
     dict_fourpair = dict_fun(hand)
     return len(dict_fourpair) == 2 and 4 in dict_fourpair.values()
         
 def is_fullhouse(hand):
-    
     dict_fullhouse = {}
     dict_fullhouse = dict_fun(hand)
     return len(dict_fullhouse) == 2 and 3 in dict_fullhouse.values() and 2 in dict_fullhouse.values()
         
     
 def is_threeofakind(hand):
-    flag = 0
     dict_threepair = {}
     dict_threepair = dict_fun(hand)
     return len(dict_threepair) == 3 and 3 in dict_threepair.values()
         
     
 def is_twopair(hand):
-    
     dict_twopair = {}
     dict_twopair = dict_fun(hand)
-    return len(dict_twopair) == 3 and 2 in dict_twopair.values()
+    return len(dict_twopair) == 4 and 2 in dict_twopair.values()
         
     
 def is_onepair(hand):
-    
     dict_onepair = {}
     dict_onepair = dict_fun(hand)
     return len((dict_onepair) == 4 and 2 in dict_onepair.values())
