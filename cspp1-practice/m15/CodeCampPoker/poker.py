@@ -149,7 +149,7 @@ def poker(hands):
             for s in hand:
                 s1+=hand[s][0]
             for q in (hand+1):
-                s2+=hand[s][0]
+                s2+=hand+1[s][0]
         if s1>s2:
             return hand
         return hand+1
