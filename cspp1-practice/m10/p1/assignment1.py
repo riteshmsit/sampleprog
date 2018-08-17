@@ -20,6 +20,13 @@ def get_available_letters(letters_guessed):
         if i not in letters_guessed:
             ret.append(i)
     return "".join(ret)
+     ret = []
+    for i in ALPHABET_A:
+        if i not in letters_guessed:
+            ret.append(i)
+    return "".join(ret)
+
+
 
 
 
