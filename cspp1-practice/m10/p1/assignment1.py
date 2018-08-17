@@ -5,9 +5,6 @@ import string
 ALPHABET_A = string.ascii_lowercase
 def get_available_letters(letters_guessed):
     
-    :param letters_guessed: list, what letters have been guessed so far
-    returns: string, comprised of letters that represents what letters have not
-      yet been guessed.
     
     ret = []
     for i in ALPHABET_A:
