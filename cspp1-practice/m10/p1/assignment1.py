@@ -1,8 +1,4 @@
-Exercise : Assignment-1
-implement the function get_available_letters that takes in one parameter -
-a list of letters, letters_guessed. This function returns a string
-that is comprised of lowercase English letters - all lowercase English letters
-that are not in letters_guessed
+
 
 
 import string
