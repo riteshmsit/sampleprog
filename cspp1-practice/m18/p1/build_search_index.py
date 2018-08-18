@@ -48,9 +48,10 @@ def word_list(documents):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    document_list = documents.lower()
-    document_list = document_list.split(" ")
-    for each_word in document_list:
+    for each_word in documents:
+        document_list[each_word] = documents.lower()
+        document_list[each_word] = documents.split(" ")
+    for each_word in documents:
         document_list[each_word] = re.sub("[^a-z]","",document_list[each_word])
     return document_list
     
