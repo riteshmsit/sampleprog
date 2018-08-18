@@ -49,9 +49,9 @@ def word_list(documents):
         return a list of words
     '''
     for each_word in documents:
-        document_list[each_word] = documents.lower()
         document_list[each_word] = documents.split(" ")
     for each_word in documents:
+        document_list[each_word] = documents.lower(" ")
         document_list[each_word] = re.sub("[^a-z]","",document_list[each_word])
     return document_list
     
