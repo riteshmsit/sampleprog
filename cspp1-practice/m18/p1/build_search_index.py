@@ -55,7 +55,7 @@ def word_list(text):
     return document_list
     
 
-def build_search_index(docs):
+def build_search_index(documents):
     '''
         Process the docs step by step as given below
     '''
