@@ -1,95 +1,103 @@
 '''
     Document Distance - A detailed description is given in the PDF
 '''
-import re
 import math
+FILENAME = 'stopwords.txt'
 
-def clean_up(data):
-    data = data.lower()
-    data_list = data.split(" ")
-    count = 0
-    while count < len(data_list):
-        data_list[count] = re.sub("[^a-z]", "", data_list[count])
-        count += 1
-
-    return data_list
-
-def remove_stop_words(word_list):
-    stop_words = load_stopwords("stopwords.txt")
-    temp_word_list = word_list[:]
-
-    for each_word in temp_word_list:
-        if each_word in stop_words:
-            word_list.remove(each_word)
-
-    return word_list
-def get_frequencydictionary(word_list_1, word_list_2):
-    freq_dict = {}
-    for each_word in word_list_1:
-        if len(each_word) > 0:
-            if each_word not in freq_dict:
-                freq_dict[each_word] = [1, 0]
-            else:
-                freq_dict[each_word][0] += 1
-        else:
-            print("Single Char Word 1:", len(each_word), ":END")
-    print(word_list_2)
-    for each_word in word_list_2:
-        if len(each_word) > 0:
-            if each_word not in freq_dict:
-                freq_dict[each_word] = [0, 1]
-            else:
-                freq_dict[each_word][1] += 1
-        else:
-            print("Single Char Word 2:", len(each_word), ":END")
-
-    return freq_dict
-
-def compute_similarity(freq_dict):
-    numerator = 0
-    den_one = 0
-    den_two = 0
-    for each_word in freq_dict:
-        freq_list = freq_dict[each_word]
-        numerator += (freq_list[0] * freq_list[1])
-        den_one += freq_list[0] ** 2
-        den_two += freq_list[1] ** 2
-
-    denominator = math.sqrt(den_one) * math.sqrt(den_two)
-
-    return numerator/denominator
-
-def similarity(d1, d2):
+def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
+    dictionary_one = {}
+    dictionary_two = {}
+    characters = "'.,?!;:()-3"
+    for character in characters:
+        if character in dict1 or character in dict2:
+            dict1 = dict1.replace(character, '')
+            dict2 = dict2.replace(character, '')
+    #print(dict2,dict1)
+    list_of_words_inputone = []
+    list_of_words_inputtwo = []
+    # list3 = []
+    # list4 = []
+    frequency_words = {}
+    list_of_words_inputone = dict1.lower().split()
+    list_of_words_inputtwo = dict2.lower().split()
+    # temp2 = []
+    #print(list_of_words_inputone,list_of_words_inputtwo)
+    # print(load_stopwords(FILENAME))
+    # temp = "Wouldn't you like to be able to park like this young girl".split(" ")
+    # for i in temp:
+    #     if i in load_stopwords(FILENAME).keys():
+    #         print("here =  ", i)
+    #         temp.remove(i)
+    #     else:
+    #         temp2.append(i)
+    # print(temp2)
+    temporary_list_one = list(list_of_words_inputone)
+    #temporary_list_one = list_of_words_inputone[:]
+    temporary_list_two = list(list_of_words_inputtwo)
+    # print(temporary_list_one)
+    # print(temporary_list_two)
+    for word in temporary_list_one:
+        if word in load_stopwords(FILENAME) and word:
+            list_of_words_inputone.remove(word)
+            #instead of len(word) > 0 i wrote word
+    for word in temporary_list_two:
+        if word in load_stopwords(FILENAME) and word:
+            list_of_words_inputtwo.remove(word)
+            #instead of len(word) > 0 i wrote word
+    # print(list_of_words_inputone)
+    # print(list_of_words_inputtwo)
+    for word in list_of_words_inputone:
+        if word not in dictionary_one:
+            dictionary_one[word] = list_of_words_inputone.count(word)
+    for word in list_of_words_inputtwo:
+        if word not in dictionary_two:
+            dictionary_two[word] = list_of_words_inputtwo.count(word)
+    keys = set(list(dictionary_one.keys())+list(dictionary_two.keys()))
+    frequency_words = {key:[0, 0] for key in keys}
+    for key in dictionary_one:
+        frequency_words[key][0] = dictionary_one[key]
+    for key in dictionary_two:
+        frequency_words[key][1] = dictionary_two[key]
+    #print(frequency_words)
+    sum_of_numerator = 0
+    sum_first = 0
+    sum_second = 0
+    for keys in frequency_words.values():
+        sum_of_numerator += keys[0]*keys[1]
+        sum_first += keys[0]**2
+        sum_second += keys[1]**2
+    frequency = sum_of_numerator/(math.sqrt(sum_first)*(math.sqrt(sum_second)))
+    return frequency
 
-    d1_list = clean_up(d1)
-    d2_list = clean_up(d2)
+    #print(frequency_words)
+    #print(list_of_words_inputone,list_of_words_inputtwo)
+    # for word in list1:
+    #   if char in word:
+    #       #word1 = word.strip(char)
+    #       list1 = list1.append(word.strip(char))
+    # print(list1)
 
-    d1_list = remove_stop_words(d1_list)
-    d2_list = remove_stop_words(d2_list)
 
-    freq_dict = get_frequencydictionary(d1_list, d2_list)
-
-    return compute_similarity(freq_dict)
-
-def load_stopwords(filename):
+def load_stopwords(file):
     '''
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(filename, 'r') as filename:
-        for line in filename:
+    with open(file, 'r') as file_name:
+        for line in file_name:
             stopwords[line.strip()] = 0
     return stopwords
-
+#print(load_stopwords(filename))
 def main():
     '''
         take two inputs and call the similarity function
     '''
     input1 = input()
     input2 = input()
+
     print(similarity(input1, input2))
 
 if __name__ == '__main__':
