@@ -52,7 +52,7 @@ def word_list(documents):
         document_list[each_word] = documents.split(" ")
     for each_word in documents:
         document_list[each_word] = documents.lower(" ")
-        document_list[each_word] = re.sub("[^a-z]","",document_list[each_word])
+        document_list[each_word] = re.sub("[^a-z]", "", document_list[each_word])
     return document_list
     
 
