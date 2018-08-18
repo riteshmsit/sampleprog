@@ -80,7 +80,7 @@ def build_search_index(documents):
     count = 0
     temp_updated_list = updated_list[:]
     for each_word in temp_updated_list:
-        if each_word == '0' or each_word == '1'or each_word == '2'or each_word == '3'or each_word == '4'or each_word == '5':
+        if each_word == '0' or each_word == '1' or each_word == '2'or each_word == '3'or each_word == '4'or each_word == '5':
             updated_list.split(each_word)
     for each_letter in updated_list:
         for d in each_letter:
