@@ -1,6 +1,6 @@
+
 '''
     Tiny Search Engine - Part 1 - Build a search index
-
     In this programming assingment you are given with some text documents as input.
     Complete the program below to build a search index. Don't worry, it is explained below.
     A search index is a python dictionary.
@@ -11,7 +11,6 @@
     Document ID is represented by the list index.
     For example: the document ID of the third document in the list is 2
     The second item of the tuple is the frequency of the word occuring in the document.
-
     Here is the sample format of the dictionary.
     {
         word1: [(doc_id, frequency),(doc_id, frequency),...],
@@ -115,4 +114,3 @@ def main():
         documents.append(input())
     # call print to display the search index
     print(print_search_index(build_search_index(documents)))
-main()
