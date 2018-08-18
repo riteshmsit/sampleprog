@@ -24,8 +24,8 @@
 # helper function to load the stop words from a file
 import re
 def remove_stopwords(document_list):
-    stop_words=load_stopwords("stopwords.txt")
-    temp_doclist=document_list[:]
+    stop_words = load_stopwords("stopwords.txt")
+    temp_doclist = document_list[:]
     for each_word in temp_doclist:
         if each_word in stop_words:
             document_list.remove(each_word)
@@ -48,10 +48,10 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    document_list=document_list.lower()
-    document_list=document_list.split(" ")
+    document_list = document_list.lower()
+    document_list = document_list.split(" ")
     for each_word in document_list:
-        document_list[each_word]=re.sub("[^a-z]","",document_list[each_word])
+        document_list[each_word] = re.sub("[^a-z]","",document_list[each_word])
     return document_list
     
 
@@ -71,24 +71,24 @@ def build_search_index(documents):
         # add or update the words of the doc to the search index
 
     # return search index
-    document_list=word_list(documents)
+    document_list = word_list(documents)
     updated_list = remove_stopwords(document_list)
-    adict={}
-    count=0
+    adict = {}
+    count = 0
     for i in updated_list:
-        if updated_list[i]=="nextline":
-            updated_list[i]=count
-        count+=1
-    temp_updated_list=updated_list[:]
+        if updated_list[i] == "nextline":
+            updated_list[i] = count
+        count += 1
+    temp_updated_list = updated_list[:]
     for each_word in temp_updated_list:
-        if each_word=='0' or each_word=='1'or each_word=='2'or each_word=='3'or each_word=='4'or each_word=='5':
+        if each_word == '0' or each_word == '1'or each_word == '2'or each_word == '3'or each_word == '4'or each_word == '5':
             updated_list.split(each_word)
     for each_letter in updated_list:
         for d in each_letter:
             if updated_list[each_letter] in adict:
-                updated_list[each_letter]=(d,0)
+                updated_list[each_letter] = (d,0)
             else:
-                updated_list[each_letter][1]+=1
+                updated_list[each_letter][1] += 1
     return updated_list
 
 # helper function to print the search index
