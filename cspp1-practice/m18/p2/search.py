@@ -43,11 +43,6 @@ def search(search_index, query):
         if updated_query[each_word] in search_index:
             updated_query[each_word] = updated_query.append(values(0)(0))
         return updated_query
-
-
-
-
-
 def process_queries(search_index, queries):
     '''
         function to process the search queries
