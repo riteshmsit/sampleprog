@@ -112,8 +112,8 @@ def main():
     lines = int(input())
     # iterate through N times and add documents to the list
     for i in range(lines):
-        documents.append("nextline")
-        documents.append(input())
+        documents=documents.append("nextline")
+        documents=documents.append(input())
     # call print to display the search index
     print_search_index(build_search_index(documents))
 
