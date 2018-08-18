@@ -24,6 +24,9 @@
 # helper function to load the stop words from a file
 import re
 def remove_stopwords(document_list):
+    '''
+    This function removes the stopwords
+    '''
     stop_words = load_stopwords("stopwords.txt")
     temp_doclist = document_list[:]
     for each_word in temp_doclist:
@@ -74,12 +77,7 @@ def build_search_index(documents):
     # return search index
     document_list = word_list(documents)
     updated_list = remove_stopwords(document_list)
-    adict = {}
     count = 0
-    for i in updated_list:
-        if updated_list[i] == "nextline":
-            updated_list[i] = count
-        count += 1
     temp_updated_list = updated_list[:]
     for each_word in temp_updated_list:
         if each_word == '0' or each_word == '1'or each_word == '2'or each_word == '3'or each_word == '4'or each_word == '5':
@@ -87,7 +85,7 @@ def build_search_index(documents):
     for each_letter in updated_list:
         for d in each_letter:
             if updated_list[each_letter] in adict:
-                updated_list[each_letter] = (d,0)
+                updated_list[each_letter] = (d, 0)
             else:
                 updated_list[each_letter][1] += 1
     return updated_list
