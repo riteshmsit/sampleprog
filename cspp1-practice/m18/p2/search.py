@@ -37,20 +37,70 @@ def search(search_index, query):
         collect all the values for the words that are in the search_index
         make a set of doc_id and return
     '''
-    updated_query = []
-    for each_word in search_index:
-        updated_query[each_word] = query[each_word].lower()
-        if updated_query[each_word] in search_index:
-            updated_query[each_word] = updated_query.append(values(0)(0))
-        return updated_query
+    #print(search_index)
+    #query = query.lower()
+    query = query.split(" ")
+    #print(query)
+    l = []
+    for each_word in query:
+        if each_word in search_index:
+            for k in range(len(search_index[each_word])):
+                l.append(search_index[each_word][k][0])
+
+    s = set(l)
+    return s
 def process_queries(search_index, queries):
     '''
         function to process the search queries
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    for i in range(len(queries)):
-        print(search(search_index, queries))
+    for query in queries:
+        print(search(search_index, query))
+            
+def main():
+    '''
+        main function
+    '''
+    # This line loads the search index  
+    search_index = eval(input())
+    
+    # read the number of search queries
+    lines = int(input())
+    
+    # read the search queries into a list
+    queries = []
+    for i in range(lines):
+        queries.append(input())
+        i += 1
+    # call process queries
+    process_queries(search_index, queries)
+
+if __name__ == '__main__':
+    main()
+
+#def search(search_index, query):
+    '''
+        function to search through the search index and return the results
+        split the query into lowercase words
+        check if the word is in the search_index
+        collect all the values for the words that are in the search_index
+        make a set of doc_id and return
+    '''
+   # updated_query = []
+   # for each_word in search_index:
+   #     updated_query[each_word] = query[each_word].lower()
+    #    if updated_query[each_word] in search_index:
+    #        updated_query[each_word] = updated_query.append(values(0)(0))
+      #  return updated_query
+#def process_queries(search_index, queries):
+    '''
+        function to process the search queries
+        iterate through all the queries and call the search function
+        print the results returned by search function
+    '''
+    #for i in range(len(queries)):
+     #   print(search(search_index, queries))
 
 def main():
     '''
