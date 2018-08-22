@@ -32,7 +32,7 @@ def create_social_network(data):
         Empty dictionary is not None, it is a dictionary with no keys
     '''
 
-    # remove the pass below and start writing your code
+    # remove the pass below and start writing your code   
     data=data[:-1]
     a=data.split("\n")
     d={}
@@ -42,7 +42,6 @@ def create_social_network(data):
             user_friends=user_data[1].split(",")
             d[user_data[0]]=user_friends
     return d
-
 
 
 
@@ -61,3 +60,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+    
