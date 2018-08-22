@@ -58,27 +58,7 @@ def process_queries(search_index, queries):
     for query in queries:
         print(search(search_index, query))
             
-def main():
-    '''
-        main function
-    '''
-    # This line loads the search index  
-    search_index = eval(input())
-    
-    # read the number of search queries
-    lines = int(input())
-    
-    # read the search queries into a list
-    queries = []
-    for i in range(lines):
-        queries.append(input())
-        i += 1
-    # call process queries
-    process_queries(search_index, queries)
-
-if __name__ == '__main__':
-    main()
-
+        
 #def search(search_index, query):
     '''
         function to search through the search index and return the results
