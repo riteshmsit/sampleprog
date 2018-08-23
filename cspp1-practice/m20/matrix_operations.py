@@ -1,4 +1,4 @@
-def mult_matrix(m1, m2):
+def mult_matrix(m_1, m_2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -7,10 +7,10 @@ def mult_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     # print('MULTIPLICATION: ', m1, m2)
-    size_m1 = len(m1)
-    size_n1 = len(m1[0])
-    size_m2 = len(m2)
-    size_n2 = len(m2[0])
+    size_m1 = len(m_1)
+    size_n1 = len(m_1[0])
+    size_m2 = len(m_2)
+    size_n2 = len(m_2[0])
         #m/n : m1/n2
     result = [0] * size_m1
     for i in range(size_m1):
@@ -35,13 +35,12 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     try:
-        result = [0] * m
-        for each in range(m):
-            result[each] = [0] * n
-
-        for i in range(m):
-            for j in range(n):
-                result[i][j] = m1[i][j] + m2[i][j]
+        result = [0] * M
+        for each in range(M):
+            result[each] = [0] * N
+        for i in range(M):
+            for j in range():
+                result[i][j] = m_1[i][j] + m_2[i][j]
 
         return result
     except:
@@ -57,21 +56,21 @@ def read_matrix():
     '''
     try:
         dim_str = input().split(',')
-        global m
-        m = int(dim_str[0])
-        global n
-        n = int(dim_str[1])
+        global M
+        M = int(dim_str[0])
+        global N
+        N = int(dim_str[1])
 
-        matrix = [0] * m
-        for each in range(m):
-            matrix[each] = [0] * n
+        matrix = [0] * M
+        for each in range(M):
+            matrix[each] = [0] * N
 
-        for i in range(m):
+        for i in range(M):
             row_str = input().split(' ')
             # print(row_str)
             row_str = list(map(int, row_str))
             # print(row_str)
-            for j in range(n):
+            for j in range(N):
                 matrix[i][j] = row_str[j]
         return matrix
     except:
