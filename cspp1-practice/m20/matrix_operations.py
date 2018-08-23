@@ -66,9 +66,7 @@ def read_matrix():
         for j in range(size_of_matrix1[1]):
             row_values = input()
             row_values = [int(number) for number in row_values.split(" ")]
-            
             matrix1[j] = row_values
-
 
 def main():
     # read matrix 1
