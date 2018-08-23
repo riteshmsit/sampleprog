@@ -35,6 +35,7 @@ def add_matrix(m1, m2):
 
     except :
         print("Error: Matrix shapes invalid for addition")
+        return None
 
 
     
@@ -67,10 +68,11 @@ def read_matrix():
             row_values = input()
             row_values = [int(number) for number in row_values.split(" ")]
             matrix1[j] = row_values
-    return matrix1
+    
     except :
         print("Error: Invalid input for the matrix")
         return None
+    return matrix1
 
 def main():
     # read matrix 1
