@@ -67,6 +67,10 @@ def read_matrix():
             row_values = input()
             row_values = [int(number) for number in row_values.split(" ")]
             matrix1[j] = row_values
+    return matrix1
+    except:
+        print("Error: Invalid input for the matrix")
+        return None
 
 def main():
     # read matrix 1
