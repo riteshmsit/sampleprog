@@ -26,7 +26,7 @@ def mult_matrix(m_1, m_2):
     else:
         print('Error: Matrix shapes invalid for mult')
 
-def add_matrix(m1, m2):
+def add_matrix(m_1, m_2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
