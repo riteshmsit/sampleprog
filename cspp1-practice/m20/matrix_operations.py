@@ -20,7 +20,7 @@ def mult_matrix(m_1, m_2):
         for i in range(size_m1):
             for j in range(size_n2):
                 for k in range(size_m2):
-                    result[i][j] += m1[i][k] * m2[k][j]
+                    result[i][j] += m_1[i][k] * m_2[k][j]
 
         return result
     else:
