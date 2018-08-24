@@ -68,9 +68,9 @@ def read_matrix():
 
         for i in range(m):
             row_str = input().split(' ')
-            # print(row_str)
+            #print(row_str)
             row_str = list(map(int, row_str))
-            # print(row_str)
+            #print(row_str)
             for j in range(n):
                 matrix[i][j] = row_str[j]
         return matrix
