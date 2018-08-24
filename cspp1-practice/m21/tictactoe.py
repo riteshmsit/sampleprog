@@ -37,7 +37,6 @@ def main():
         b=input()
         a=list(re.sub("[^x,.,o]","",b))
         tto += [a]
-    print(tto)
     winner = play_tto()
     print(winner)
     
