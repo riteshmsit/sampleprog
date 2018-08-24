@@ -26,7 +26,7 @@ def play_tto():
             return 'x'
         else:
             return 'o'
-    else:
+    except:
         print("invalid game")
 
 import re   
