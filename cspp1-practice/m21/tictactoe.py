@@ -27,7 +27,7 @@ def play_tto():
         else:
             count = 0
             for i in range(tto):
-                for j in range(tto):
+                for j in range(i):
                     if tto[i][j] == 'x'
                         count+=1
                     if count == 9
