@@ -28,9 +28,9 @@ def play_tto():
             count = 0
             for i in range(tto):
                 for j in range(len(tto[i])):
-                    if tto[i][j] == 'x'
+                    if tto[i][j] == 'x':
                         count+=1
-                    if count == 9
+                    if count == 9:
                         print('invalid game')
             return 'o'
     except:
