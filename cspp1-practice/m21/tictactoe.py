@@ -24,12 +24,17 @@ def play_tto():
             #bottom row
         elif tto[2][0] == 'x' and tto[2][1] == 'x' and tto[2][2] == 'x':
             return 'x'
-        else:
-            return 'draw'
-    else:
-        return 'o'
+        elif:
+            count = 0
+            for i in range(tto):
+                for j in range(tto):
+                    if tto[i][j] == 'x'
+                        count+=1
+                    if count == 9
+                        print('invalid game')
+            return 'o'
     except:
-        print("invalid game")
+        print('error')
 
 import re   
 def main():
