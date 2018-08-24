@@ -1,11 +1,11 @@
 def play_tto():
     try:
         count = 0
-            for i in range(tto):
-                for j in range(len(tto[i])):
-                    if tto[i][j] == 'x':
+        for i in range(tto):
+            for j in range(len(tto[i])):
+                if tto[i][j] == 'x':
                         count+=1
-                    if tto[i][j] !='x' and tto[i][j]!='o' and tto[i][j]!='p':
+                    if tto[i][j] !='x' and tto[i][j]!='o' and tto[i][j]!='.':
                         return 'invalid game'
                     if count == 9:
                         print('invalid game')
