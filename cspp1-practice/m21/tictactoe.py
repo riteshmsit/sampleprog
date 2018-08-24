@@ -33,14 +33,7 @@ def play_tto():
             #bottom row
         elif tto[2][0] == 'x' and tto[2][1] == 'x' and tto[2][2] == 'x':
             return 'x'
-        elif:
-            count = 0
-            for i in range(tto):
-                for j in range(len(tto[i])):
-                    if tto[i][j] == 'x':
-                        count+=1
-                    if count == 9:
-                        print('invalid game')
+       
         else:
             return "o"
 
