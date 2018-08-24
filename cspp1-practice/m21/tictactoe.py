@@ -25,14 +25,11 @@ def play_tto():
         elif tto[2][0] == 'x' and tto[2][1] == 'x' and tto[2][2] == 'x':
             return 'x'
         else:
-            return 'draw'
-    except:
+            return 'o'
+    else:
         print("invalid game")
 
-import re
-        
-#def read_tto():
-    
+import re   
 def main():
     global tto
     tto =[]
