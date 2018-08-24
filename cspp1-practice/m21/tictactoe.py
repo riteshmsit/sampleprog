@@ -1,14 +1,14 @@
 def play_tto():
     try:
-        count = 0
-        for i in range(tto):
-            for j in range(len(tto[i])):
-                if tto[i][j] == 'x':
-                    count+=1
-                if tto[i][j] !='x' and tto[i][j]!='o' and tto[i][j]!='.':
-                    return 'invalid game'
-            if count == 9:
-                print('invalid game')
+        #count = 0
+        #for i in range(len(tto)):
+            #for j in range(len(tto[i])):
+                #if tto[i][j] == 'x':
+                    #count+=1
+                #if tto[i][j] !='x' and tto[i][j]!='o' and tto[i][j]!='.':
+                    #return 'invalid game'
+            #if count == 9:
+                #print('invalid game')
             #top row
         if tto[0][0] == 'x' and tto[0][1] == 'x' and tto[0][2] == 'x':
             return 'x'
@@ -38,7 +38,8 @@ def play_tto():
             return "o"
 
     except:
-        print('error')
+        print('invalid game')
+        
 
 import re   
 def main():
