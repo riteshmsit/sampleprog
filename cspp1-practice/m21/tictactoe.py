@@ -27,7 +27,7 @@ def play_tto():
         else:
             return 'o'
     except:
-        return 'None'
+        print("Invalid input")
 
 import re
         
