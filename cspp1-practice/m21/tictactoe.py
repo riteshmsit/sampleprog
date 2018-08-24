@@ -24,7 +24,7 @@ def play_tto():
             #bottom row
         elif tto[2][0] == 'x' and tto[2][1] == 'x' and tto[2][2] == 'x':
             return 'x'
-        elif:
+        else:
             count = 0
             for i in range(tto):
                 for j in range(tto):
