@@ -25,7 +25,9 @@ def play_tto():
         elif tto[2][0] == 'x' and tto[2][1] == 'x' and tto[2][2] == 'x':
             return 'x'
         else:
-            return 'o'
+            return 'draw'
+    else:
+        return 'o'
     except:
         print("invalid game")
 
