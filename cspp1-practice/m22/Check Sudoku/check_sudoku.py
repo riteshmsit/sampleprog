@@ -20,7 +20,7 @@ def check_sudoku(sudoku):
                 d=[]
                 d += sudoku[i][j]
             b = set(d)
-            if len(d) !=9:
+            if len(b) !=9:
                 return False
 
     return True
