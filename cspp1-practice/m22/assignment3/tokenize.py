@@ -20,6 +20,6 @@ def main():
     	str_input += input()
     	if '.' or ';' in str_input:
     		str_input = str_input[:-2]
-    a = tokenize(str_input)
+    a = print(tokenize(str_input))
 if __name__ == '__main__':
     main()
