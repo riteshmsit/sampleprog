@@ -19,7 +19,7 @@ def main():
     for i in range(lines):
     	str_input += input()
     	if '.' or ';' in str_input:
-    		str_input = str_input[:-2]
+    		str_input[i] = str_input[:-2]
     a = print(tokenize(str_input))
 if __name__ == '__main__':
     main()
