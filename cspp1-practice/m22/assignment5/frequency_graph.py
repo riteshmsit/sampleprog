@@ -9,8 +9,8 @@ def frequency_graph(dictionary):
     	b = ''
     	if h[i] in dictionary:
     		count = dictionary(h[i])
-    		for i in count:
-    			b += '#'
+    	for i in count:
+    		b += '#'
     	print(h[i],'-',b)
     return ''
 def main():
