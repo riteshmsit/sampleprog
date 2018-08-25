@@ -25,6 +25,7 @@ def check_sudoku(sudoku):
             return False
         count += 1
     if count == 81:
+        print(count)
         return True
 
 def main():
