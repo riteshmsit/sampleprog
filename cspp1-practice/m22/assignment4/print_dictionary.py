@@ -8,7 +8,7 @@ def print_dictionary(dictionary):
     a = sorted(dictionary.keys())
     for i in range(len(a)):
     	if a[i] in dictionary:
-    		return str(a[i])+' ' + '-' + ' ' +str(dictionary[a[i]])
+    		print(a[i],'-',dictionary[a[i]])
 
 def main():
     dictionary = eval(input())
