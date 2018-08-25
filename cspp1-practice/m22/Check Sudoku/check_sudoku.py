@@ -13,7 +13,16 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    pass
+    for i in range(len(sudoku)):
+        a = set(sudoku[i])
+        if len(a) == 9:
+            for j in range(len(sudoku)):
+                l=[]
+                l.append(sudoku[i][j])
+                b = set(l)
+                if len(b) !=9:
+                    return False
+    return True
 
 def main():
     '''
