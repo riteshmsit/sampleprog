@@ -15,6 +15,7 @@ def tokenize(string):
 
 def main():
     lines = int(input())
+    str_input = ""
     for i in range(lines):
     	str_input += input()
     	if '.' or ';' in str_input:
