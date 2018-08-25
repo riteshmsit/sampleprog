@@ -9,7 +9,7 @@ def print_dictionary(dictionary):
     for i in range(len(a)):
     	if a[i] in dictionary:
     		print(a[i],'-',dictionary[a[i]])
-
+    return ''
 def main():
     dictionary = eval(input())
     print(print_dictionary(dictionary))
