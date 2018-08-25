@@ -1,11 +1,5 @@
 def mult_matrix(m1, m2):
-    '''
-        check if the matrix1 columns = matrix2 rows
-        mult the matrices and return the result matrix
-        print an error message if the matrix shapes are not valid for mult
-        and return None
-        error message should be "Error: Matrix shapes invalid for mult"
-    '''
+           
     # print('MULTIPLICATION: ', m1, m2)
     size_m1 = len(m1)
     size_n1 = len(m1[0])

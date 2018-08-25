@@ -50,7 +50,7 @@ def create_social_network(data):
         for i in data_list:
             user = i.split(" follows ")
             user_list = user[1].split(",")
-            dict[user[0]]= user_list
+            dict[user[0]] = user_list
     return dict
 
 
