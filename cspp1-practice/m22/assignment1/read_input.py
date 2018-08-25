@@ -6,8 +6,9 @@ def main():
     lines = input()
     str_input = ""
     for i in range(len(lines)):
-    	str_input += input()
+    	str_input += str(input())
     print(str_input)
+   
 
 if __name__ == '__main__':
     main()
