@@ -8,8 +8,5 @@ def main():
     for i in range((lines)):
     	str_input += str(input()) + str('\n')
     print(str_input)
-'''
-main function
-'''
 if __name__ == '__main__':
     main()
