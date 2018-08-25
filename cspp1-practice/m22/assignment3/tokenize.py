@@ -6,6 +6,8 @@ def tokenize(string):
 	str_list = string.split(' ')
 	my_dict = {}
 	for i in range(len(str_list)):
+		if '.' or ';' in str_list[i]:
+			str_list[i] = str_list[:-2]
 		if str_list[i] not in my_dict:
 			my_dict[str_list[i]] = 1
 		else:
@@ -18,8 +20,6 @@ def main():
     str_input = ""
     for i in range(lines):
     	str_input += input()
-    	if '.' or ';' in str_input:
-    		str_input = str_input[::-2]
     a = print(tokenize(str_input))
 if __name__ == '__main__':
     main()
