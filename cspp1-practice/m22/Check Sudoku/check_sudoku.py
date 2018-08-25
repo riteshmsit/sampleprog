@@ -21,9 +21,11 @@ def check_sudoku(sudoku):
             d=[]
             d += sudoku[i][j]
         b = set(d)
-        if len(b) !=9:
+        if len(b) != 9:
             return False
-    return True
+        count += 1
+    if count == 81:
+        return True
 
 def main():
     '''
