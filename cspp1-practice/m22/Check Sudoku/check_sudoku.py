@@ -16,13 +16,13 @@ def check_sudoku(sudoku):
     for i in range(9):
         a = set(sudoku[i])
         if len(a) == 9:
+            return False
             for j in range(9):
                 d=[]
                 d += sudoku[i][j]
             b = set(d)
             if len(b) !=9:
                 return False
-
     return True
 
 def main():
