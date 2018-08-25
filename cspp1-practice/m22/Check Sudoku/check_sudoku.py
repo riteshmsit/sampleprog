@@ -18,7 +18,7 @@ def check_sudoku(sudoku):
         if len(a) != 9:
             return False
     count = 0
-    for j in range(9):
+    for j in range(len(sudoku)):
         count += len(sudoku[j])
     if count == 81:
         return True
