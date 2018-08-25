@@ -1,10 +1,10 @@
 '''
 Write a python program to read multiple lines of text input and store the input into a string.
 '''
-'''
-program to print the input string
-'''
 def main():
+'''
+program to print input string'
+'''
     lines = int(input())
     str_input = ""
     for i in range((lines)):
