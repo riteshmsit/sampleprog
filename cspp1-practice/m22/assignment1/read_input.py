@@ -1,7 +1,9 @@
 '''
 Write a python program to read multiple lines of text input and store the input into a string.
 '''
-
+'''
+program to print the input string
+'''
 def main():
     lines = int(input())
     str_input = ""
