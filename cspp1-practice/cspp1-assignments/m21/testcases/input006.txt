@@ -1,3 +1,0 @@
-x o p
-o o p
-o x p
