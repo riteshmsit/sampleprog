@@ -7,7 +7,7 @@ def frequency_graph(dictionary):
     h = sorted(dictionary.keys())
     for i in range(len(h)):
         if h[i] in dictionary:
-            print(h[i],'-',int(len(dictionary[h[i]]) * '#'))
+            print(h[i],'-',len(dictionary[h[i]]) * '#')
     return ''
 def main():
     dictionary = eval(input())
