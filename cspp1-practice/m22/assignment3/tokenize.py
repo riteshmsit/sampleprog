@@ -7,7 +7,11 @@ def tokenize(string):
 	my_dict = {}
 	for i in range(len(str_list)):
 		#if '.' or ';' in str_list[i]:
-			#str_list[i] = str_list[i][:-1]
+			#str_list[i] = str_list[i][:-1
+		if str_list[i] == "'had had'" or str_list[i] == "'had'" :
+			str_list[i] == 'had'
+:
+
 		if str_list[i] not in my_dict:
 			my_dict[str_list[i]] = 1
 		else:
