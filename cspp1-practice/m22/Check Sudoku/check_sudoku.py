@@ -24,7 +24,6 @@ def check_sudoku(sudoku):
         if len(b) != 9:
             return False
     return True
-
 def main():
     '''
         main function to read input sudoku from console
