@@ -10,7 +10,7 @@ def frequency_graph(dictionary):
             print(h[i],'-',int(len(dictionary[h[i]]) * '#'))
     return ''
 def main():
-    dictionar = eval(input())
+    dictionary = eval(input())
     print(frequency_graph(dictionary))
 
 if __name__ == '__main__':
