@@ -17,8 +17,8 @@ def check_sudoku(sudoku):
         a = set(sudoku[i])
         if len(a) != 9:
             return False
+        col = []
         for j in range(9):
-            col = []
             col += [sudoku[j][i]]
         b = set(col)
         if len(b) != 9:
