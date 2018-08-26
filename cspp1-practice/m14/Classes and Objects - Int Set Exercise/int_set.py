@@ -27,7 +27,7 @@ class intSet(object):
         try:
             self.vals.remove(e)
         except:
-            raise ValueError(str(e) + ' not found')
+            raise ValueError(str(e) +'not found')
 
     def __str__(self):
         """Returns a string representation of self"""
