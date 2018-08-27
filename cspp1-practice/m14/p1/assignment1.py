@@ -91,7 +91,7 @@ class Message(object):
 
         Returns: self.message_text
         '''
-        return self.message
+        return self.message_text
 
     ### DO NOT MODIFY THIS METHOD ###
     def get_valid_words(self):
