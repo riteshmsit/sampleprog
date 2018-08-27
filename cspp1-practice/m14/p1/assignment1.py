@@ -85,7 +85,7 @@ class Message(object):
         self.shift_dict = {}
 
     ### DO NOT MODIFY THIS METHOD ###
-    def get_message(self):
+    def get_message_text(self):
         '''
         Used to safely access self.message_text outside of the class
 
