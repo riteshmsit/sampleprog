@@ -43,7 +43,7 @@ def is_word(word_list, word):
     False
     '''
     word = word.lower()
-    word = word.strip(" !@#$%^&*()-_+={}[]|\:;'<>?,./\"")
+    word = word.strip(" !@#$%^&*()-_+={}[]|:;'<>?,./\"")
     return word in word_list
 
 ### DO NOT MODIFY THIS FUNCTION ###
@@ -264,8 +264,8 @@ def decrypt_story():
     ''' Decrypt the story text using CiphertextMessage class and return the
         shift value and decrypted string in a tuple.
     '''
-    pass #delete this line when you write your code.
-
+     #delete this line when you write your code.
+        
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
