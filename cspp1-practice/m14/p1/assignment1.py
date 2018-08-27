@@ -40,6 +40,7 @@
 # Remember that spaces and punctuation should not be changed by the cipher.
 
 # Helper code
+WORDLIST_FILENAME = 'words.txt'
 def load_words(file_name):
     '''
     file_name (string): the name of the file containing
@@ -151,7 +152,7 @@ class Message(object):
             else:
                 new_msg.append(self.build_shift_dict(shift)[i])
         return ''.join(new_msg)
-WORDLIST_FILENAME = 'words.txt'
+
 # Helper code End
 
 
