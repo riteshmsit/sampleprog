@@ -61,7 +61,7 @@ def main():
         call check_sudoku function and print the result to console
     '''
 
-    s = input()
+    s = str(input())
     check_sudoku(s)
 
 if __name__ == '__main__':
