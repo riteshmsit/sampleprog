@@ -1,14 +1,2 @@
 ************* Module sudoku
-sudoku.py:18:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
-sudoku.py:20:14: C0326: No space allowed before :
-    splitting : [s[i:i+n] for i in range(0, len(s), n)]
-              ^ (bad-whitespace)
-sudoku.py:10:0: C0103: Argument name "s" doesn't conform to snake_case naming style (invalid-name)
-sudoku.py:19:4: C0103: Variable name "n" doesn't conform to snake_case naming style (invalid-name)
-sudoku.py:10:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
-sudoku.py:20:4: W0612: Unused variable 'splitting' (unused-variable)
-sudoku.py:64:4: C0103: Variable name "s" doesn't conform to snake_case naming style (invalid-name)
-
-------------------------------------------------------------------
-Your code has been rated at 3.00/10 (previous run: 3.00/10, +0.00)
-
+sudoku.py:76:0: E0001: unexpected unindent (<unknown>, line 76) (syntax-error)

@@ -17,7 +17,25 @@ def check_sudoku(s):
     if len(s) < 81 or len(s) > 81:
     	return "Invalid input"
     n = 9
-    splitting : [s[i:i+n] for i in range(0, len(s), n)]
+    [s[i:i+n] for i in range(0, len(s), n)]
+    try:
+    	for i in range(len(s)):
+    		temp = i.copy()
+    		list_1 = []
+    		int(temp.sort)
+    		if ''.join(temp) != '123456789':
+    			return "Invalid Sudoku:Duplicate values"
+    		for j in range(len(s)):
+    			list_1.append(s[j][i])
+    		list_1.sort()
+    		if ''.join(list_1) != '123456789':
+    			return "Invalid Sudoku:Duplicate values"
+
+    		
+
+    
+
+
 
     # splitting : [line[i:i+n] for i in range(0, len(line), n)]
     # row = []
