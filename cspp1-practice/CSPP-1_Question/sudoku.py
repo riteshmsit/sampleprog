@@ -19,16 +19,20 @@ def check_sudoku(s):
         return "Invalid input"
     n = 9
     a = [s[i:i+n] for i in range(0, len(s), n)]
-    try:
-        for i in range(len(a)):
-            tempint = intlist[:]
-            if '.' not in a[i]:
-                b = list(a[i])
-                for j in range(len(b)):
-                    if b[j] in tempint:
-                        tempint.remove(b[j])
-                for k in range(len(tempint)):
-                    print(tempint[k])
+    count = 0
+    for i in range(len(a)):
+        if '.' not in a[i]:
+            count += 9
+        tempint = intlist[:]
+        if '.' not in a[i]:
+            b = list(a[i])
+            for j in range(len(b)):
+                if b[j] in tempint:
+                    tempint.remove(b[j])
+            for k in range(len(tempint)):
+                print(tempint[k])
+    if count == 9:
+        return "Given sudoku is solved"
 
                 # for j in range(len(b)):
                 #     if '.' not in b[j]:
@@ -55,8 +59,8 @@ def check_sudoku(s):
             # list_1.sort()
             # if ''.join(list_1) != '123456789':
                 
-    except:
-        return "Invalid Sudoku:Duplicate values"
+    
+    # return "Invalid Sudoku:Duplicate values"
 
             
 
