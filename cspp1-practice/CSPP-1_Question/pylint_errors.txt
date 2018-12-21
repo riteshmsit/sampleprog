@@ -1,2 +1,15 @@
 ************* Module sudoku
-sudoku.py:78:0: E0001: expected an indented block (<unknown>, line 78) (syntax-error)
+sudoku.py:34:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+sudoku.py:36:0: C0303: Trailing whitespace (trailing-whitespace)
+sudoku.py:38:0: C0303: Trailing whitespace (trailing-whitespace)
+sudoku.py:10:0: C0103: Argument name "s" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:19:4: C0103: Variable name "n" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:20:4: W0106: Expression "[s[i:i + n] for i in range(0, len(s), n)]" is assigned to nothing (expression-not-assigned)
+sudoku.py:33:4: W0702: No exception type(s) specified (bare-except)
+sudoku.py:28:12: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+sudoku.py:10:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+sudoku.py:83:4: C0103: Variable name "s" doesn't conform to snake_case naming style (invalid-name)
+
+------------------------------------------------------------------
+Your code has been rated at 5.83/10 (previous run: 3.00/10, +2.83)
+
