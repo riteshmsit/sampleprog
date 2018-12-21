@@ -9,6 +9,6 @@ sudoku.py:21:4: W0612: Unused variable 'splitting' (unused-variable)
 sudoku.py:66:17: E0602: Undefined variable 'suduko_input' (undefined-variable)
 sudoku.py:65:4: W0612: Unused variable 'sudoku_input' (unused-variable)
 
--------------------------------------------------------------------
-Your code has been rated at -1.00/10 (previous run: 0.00/10, -1.00)
+--------------------------------------------------------------------
+Your code has been rated at -1.00/10 (previous run: -1.00/10, +0.00)
 
