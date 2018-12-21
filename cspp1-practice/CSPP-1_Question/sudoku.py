@@ -30,7 +30,7 @@ def check_sudoku(s):
                 if b[j] in tempint:
                     tempint.remove(b[j])
             for k in range(len(tempint)):
-                print(tempint[k])
+                # print(tempint[k])
     if count == 9:
         return "Given sudoku is solved"
 
