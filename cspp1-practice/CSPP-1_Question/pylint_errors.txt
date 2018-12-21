@@ -40,6 +40,6 @@ sudoku.py:30:16: C0200: Consider using enumerate instead of iterating with range
 sudoku.py:10:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
 sudoku.py:108:4: C0103: Variable name "s" doesn't conform to snake_case naming style (invalid-name)
 
--------------------------------------------------------------------
-Your code has been rated at -0.43/10 (previous run: 5.83/10, -6.27)
+--------------------------------------------------------------------
+Your code has been rated at -0.43/10 (previous run: -0.43/10, +0.00)
 
