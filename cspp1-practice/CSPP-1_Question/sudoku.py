@@ -14,22 +14,47 @@ def check_sudoku(s):
     '''
     # print(sudoku)
     # print(sudoku[0][0])
+    intlist = [1,2,3,4,5,6,7,8,9]
     if len(s) < 81 or len(s) > 81:
         return "Invalid input"
     n = 9
-    [s[i:i+n] for i in range(0, len(s), n)]
+    a = [s[i:i+n] for i in range(0, len(s), n)]
     try:
-        for i in range(len(s)):
+        for i in range(len(a)):
+            tempint = intlist[:]
+            if '.' not in a[i]:
+                b = list(a[i])
+                for j in range(len(b)):
+                    if b[j] in tempint:
+                        tempint.remove(b[j])
+                for k in range(len(tempint)):
+                    print(tempint[k])
+
+                # for j in range(len(b)):
+                #     if '.' not in b[j]:
+                #         c += b[j]
+                # for k in c:
+                #     if c not in intlist:
+                #         d += k
+                # e = int(d)
+                # if 
+
+                
+
+
+
+
+
             temp = i.copy()
             list_1 = []
             int(temp.sort)
             if ''.join(temp) != '123456789':
-                return "Invalid Sudoku:Duplicate values"
+                
             for j in range(len(s)):
                 list_1.append(s[j][i])
             list_1.sort()
             if ''.join(list_1) != '123456789':
-                return "Invalid Sudoku:Duplicate values"
+                
     except:
             return "Invalid Sudoku:Duplicate values"
 
