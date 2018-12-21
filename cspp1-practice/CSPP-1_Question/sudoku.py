@@ -8,17 +8,17 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 
-def check_sudoku(sudoku_input):
+def check_sudoku(suduku_input):
     '''
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
     # print(sudoku)
     # print(sudoku[0][0])
-    if len(sudoku_input) < 81 or len(sudoku_input) > 81:
+    if len(suduku_input) < 81 or len(suduku_input) > 81:
     	return "Invalid input"
     n = 9
-    splitting : [sudoku_input[i:i+n] for i in range(0, len(sudoku_input), n)]
+    splitting : [suduku_input[i:i+n] for i in range(0, len(suduku_input), n)]
 
     # splitting : [line[i:i+n] for i in range(0, len(line), n)]
     # row = []
@@ -62,7 +62,7 @@ def main():
         call check_sudoku function and print the result to console
     '''
 
-    sudoku_input = input()
+    suduku_input = input()
     check_sudoku(suduko_input)
 
 if __name__ == '__main__':
