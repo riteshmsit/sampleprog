@@ -1,0 +1,14 @@
+************* Module sudoku
+sudoku.py:19:0: W0312: Found indentation with tabs instead of spaces (mixed-indentation)
+sudoku.py:21:14: C0326: No space allowed before :
+    splitting : [sudoku_input[i:i+n] for i in range(0, len(sudoku_input), n)]
+              ^ (bad-whitespace)
+sudoku.py:20:4: C0103: Variable name "n" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:11:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+sudoku.py:21:4: W0612: Unused variable 'splitting' (unused-variable)
+sudoku.py:66:17: E0602: Undefined variable 'suduko_input' (undefined-variable)
+sudoku.py:65:4: W0612: Unused variable 'sudoku_input' (unused-variable)
+
+-------------------------------------------------------------------
+Your code has been rated at -1.00/10 (previous run: 0.00/10, -1.00)
+
