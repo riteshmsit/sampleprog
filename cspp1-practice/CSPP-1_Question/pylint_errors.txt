@@ -11,5 +11,5 @@ sudoku.py:10:0: R1710: Either all return statements in a function should return 
 sudoku.py:83:4: C0103: Variable name "s" doesn't conform to snake_case naming style (invalid-name)
 
 ------------------------------------------------------------------
-Your code has been rated at 5.83/10 (previous run: 3.00/10, +2.83)
+Your code has been rated at 5.83/10 (previous run: 5.83/10, +0.00)
 

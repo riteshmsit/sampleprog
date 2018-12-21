@@ -31,7 +31,7 @@ def check_sudoku(s):
             if ''.join(list_1) != '123456789':
                 return "Invalid Sudoku:Duplicate values"
     except:
-            return "none"
+            return "Invalid Sudoku:Duplicate values"
 
             
 
