@@ -45,18 +45,18 @@ def check_sudoku(s):
 
 
 
-            temp = i.copy()
-            list_1 = []
-            int(temp.sort)
-            if ''.join(temp) != '123456789':
+            # temp = i.copy()
+            # list_1 = []
+            # int(temp.sort)
+            # if ''.join(temp) != '123456789':
                 
-            for j in range(len(s)):
-                list_1.append(s[j][i])
-            list_1.sort()
-            if ''.join(list_1) != '123456789':
+            # for j in range(len(s)):
+            #     list_1.append(s[j][i])
+            # list_1.sort()
+            # if ''.join(list_1) != '123456789':
                 
     except:
-            return "Invalid Sudoku:Duplicate values"
+        return "Invalid Sudoku:Duplicate values"
 
             
 

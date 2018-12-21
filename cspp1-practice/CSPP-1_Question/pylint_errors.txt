@@ -1,2 +1,45 @@
 ************* Module sudoku
-sudoku.py:53:0: E0001: expected an indented block (<unknown>, line 53) (syntax-error)
+sudoku.py:17:16: C0326: Exactly one space required after comma
+    intlist = [1,2,3,4,5,6,7,8,9]
+                ^ (bad-whitespace)
+sudoku.py:17:18: C0326: Exactly one space required after comma
+    intlist = [1,2,3,4,5,6,7,8,9]
+                  ^ (bad-whitespace)
+sudoku.py:17:20: C0326: Exactly one space required after comma
+    intlist = [1,2,3,4,5,6,7,8,9]
+                    ^ (bad-whitespace)
+sudoku.py:17:22: C0326: Exactly one space required after comma
+    intlist = [1,2,3,4,5,6,7,8,9]
+                      ^ (bad-whitespace)
+sudoku.py:17:24: C0326: Exactly one space required after comma
+    intlist = [1,2,3,4,5,6,7,8,9]
+                        ^ (bad-whitespace)
+sudoku.py:17:26: C0326: Exactly one space required after comma
+    intlist = [1,2,3,4,5,6,7,8,9]
+                          ^ (bad-whitespace)
+sudoku.py:17:28: C0326: Exactly one space required after comma
+    intlist = [1,2,3,4,5,6,7,8,9]
+                            ^ (bad-whitespace)
+sudoku.py:17:30: C0326: Exactly one space required after comma
+    intlist = [1,2,3,4,5,6,7,8,9]
+                              ^ (bad-whitespace)
+sudoku.py:40:20: C0303: Trailing whitespace (trailing-whitespace)
+sudoku.py:42:0: C0303: Trailing whitespace (trailing-whitespace)
+sudoku.py:52:0: C0303: Trailing whitespace (trailing-whitespace)
+sudoku.py:57:0: C0303: Trailing whitespace (trailing-whitespace)
+sudoku.py:61:0: C0303: Trailing whitespace (trailing-whitespace)
+sudoku.py:63:0: C0303: Trailing whitespace (trailing-whitespace)
+sudoku.py:10:0: C0103: Argument name "s" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:20:4: C0103: Variable name "n" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:21:4: C0103: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:58:4: W0702: No exception type(s) specified (bare-except)
+sudoku.py:23:8: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+sudoku.py:26:16: C0103: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:27:16: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+sudoku.py:30:16: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+sudoku.py:10:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+sudoku.py:108:4: C0103: Variable name "s" doesn't conform to snake_case naming style (invalid-name)
+
+-------------------------------------------------------------------
+Your code has been rated at -0.43/10 (previous run: 5.83/10, -6.27)
+
