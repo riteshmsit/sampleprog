@@ -15,23 +15,25 @@ def check_sudoku(s):
     # print(sudoku)
     # print(sudoku[0][0])
     if len(s) < 81 or len(s) > 81:
-    	return "Invalid input"
+        return "Invalid input"
     n = 9
     [s[i:i+n] for i in range(0, len(s), n)]
     try:
-    	for i in range(len(s)):
-    		temp = i.copy()
-    		list_1 = []
-    		int(temp.sort)
-    		if ''.join(temp) != '123456789':
-    			return "Invalid Sudoku:Duplicate values"
-    		for j in range(len(s)):
-    			list_1.append(s[j][i])
-    		list_1.sort()
-    		if ''.join(list_1) != '123456789':
-    			return "Invalid Sudoku:Duplicate values"
+        for i in range(len(s)):
+            temp = i.copy()
+            list_1 = []
+            int(temp.sort)
+            if ''.join(temp) != '123456789':
+                return "Invalid Sudoku:Duplicate values"
+            for j in range(len(s)):
+                list_1.append(s[j][i])
+            list_1.sort()
+            if ''.join(list_1) != '123456789':
+                return "Invalid Sudoku:Duplicate values"
+    except:
 
-    		
+
+            
 
     
 
@@ -78,7 +80,6 @@ def main():
         main function to read input sudoku from console
         call check_sudoku function and print the result to console
     '''
-
     s = str(input())
     print(check_sudoku(s))
 
