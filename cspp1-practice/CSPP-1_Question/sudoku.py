@@ -7,18 +7,17 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
-
-def check_sudoku(suduku_input):
+def check_sudoku(s):
     '''
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
     # print(sudoku)
     # print(sudoku[0][0])
-    if len(suduku_input) < 81 or len(suduku_input) > 81:
+    if len(s) < 81 or len(s) > 81:
     	return "Invalid input"
     n = 9
-    splitting : [suduku_input[i:i+n] for i in range(0, len(suduku_input), n)]
+    splitting : [s[i:i+n] for i in range(0, len(s), n)]
 
     # splitting : [line[i:i+n] for i in range(0, len(line), n)]
     # row = []
@@ -62,8 +61,8 @@ def main():
         call check_sudoku function and print the result to console
     '''
 
-    suduku_input = input()
-    check_sudoku(suduko_input)
+    s = input()
+    check_sudoku(s)
 
 if __name__ == '__main__':
     main()
