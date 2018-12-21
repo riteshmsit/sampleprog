@@ -20,6 +20,7 @@ def check_sudoku(s):
     n = 9
     a = [s[i:i+n] for i in range(0, len(s), n)]
     count = 0
+
     for i in range(len(a)):
         if '.' not in a[i]:
             count += 9
@@ -29,10 +30,11 @@ def check_sudoku(s):
             for j in range(len(b)):
                 if b[j] in tempint:
                     tempint.remove(b[j])
-            for k in range(len(tempint)):
-                # print(tempint[k])
     if count == 9:
         return "Given sudoku is solved"
+            # for k in range(len(tempint)):
+                # print(tempint[k])
+
 
                 # for j in range(len(b)):
                 #     if '.' not in b[j]:
