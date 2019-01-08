@@ -1,44 +1,28 @@
 ************* Module sudoku
-sudoku.py:17:16: C0326: Exactly one space required after comma
-    intlist = [1,2,3,4,5,6,7,8,9]
-                ^ (bad-whitespace)
-sudoku.py:17:18: C0326: Exactly one space required after comma
-    intlist = [1,2,3,4,5,6,7,8,9]
-                  ^ (bad-whitespace)
-sudoku.py:17:20: C0326: Exactly one space required after comma
-    intlist = [1,2,3,4,5,6,7,8,9]
-                    ^ (bad-whitespace)
-sudoku.py:17:22: C0326: Exactly one space required after comma
-    intlist = [1,2,3,4,5,6,7,8,9]
-                      ^ (bad-whitespace)
-sudoku.py:17:24: C0326: Exactly one space required after comma
-    intlist = [1,2,3,4,5,6,7,8,9]
-                        ^ (bad-whitespace)
-sudoku.py:17:26: C0326: Exactly one space required after comma
-    intlist = [1,2,3,4,5,6,7,8,9]
-                          ^ (bad-whitespace)
-sudoku.py:17:28: C0326: Exactly one space required after comma
-    intlist = [1,2,3,4,5,6,7,8,9]
-                            ^ (bad-whitespace)
-sudoku.py:17:30: C0326: Exactly one space required after comma
-    intlist = [1,2,3,4,5,6,7,8,9]
-                              ^ (bad-whitespace)
-sudoku.py:46:20: C0303: Trailing whitespace (trailing-whitespace)
-sudoku.py:48:0: C0303: Trailing whitespace (trailing-whitespace)
-sudoku.py:58:0: C0303: Trailing whitespace (trailing-whitespace)
-sudoku.py:63:0: C0303: Trailing whitespace (trailing-whitespace)
-sudoku.py:64:0: C0303: Trailing whitespace (trailing-whitespace)
-sudoku.py:67:0: C0303: Trailing whitespace (trailing-whitespace)
-sudoku.py:69:0: C0303: Trailing whitespace (trailing-whitespace)
-sudoku.py:10:0: C0103: Argument name "s" doesn't conform to snake_case naming style (invalid-name)
-sudoku.py:20:4: C0103: Variable name "n" doesn't conform to snake_case naming style (invalid-name)
-sudoku.py:21:4: C0103: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
-sudoku.py:24:4: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
-sudoku.py:29:12: C0103: Variable name "b" doesn't conform to snake_case naming style (invalid-name)
-sudoku.py:30:12: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
-sudoku.py:10:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
-sudoku.py:114:4: C0103: Variable name "s" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:13:0: C0325: Unnecessary parens after 'if' keyword (superfluous-parens)
+sudoku.py:55:0: C0301: Line too long (115/100) (line-too-long)
+sudoku.py:88:0: C0303: Trailing whitespace (trailing-whitespace)
+sudoku.py:94:0: C0304: Final newline missing (missing-final-newline)
+sudoku.py:9:0: C0111: Missing function docstring (missing-docstring)
+sudoku.py:15:0: C0111: Missing function docstring (missing-docstring)
+sudoku.py:16:4: C0103: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:19:8: C0103: Variable name "l" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:21:4: C0103: Variable name "m" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:22:4: C0103: Variable name "n" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:23:4: C0103: Variable name "p" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:24:4: C0103: Variable name "q" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:26:8: C0103: Variable name "q" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:29:12: C0103: Variable name "q" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:30:8: C0103: Variable name "p" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:31:4: C0103: Variable name "l" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:33:8: R1704: Redefining argument with the local name 'i' (redefined-argument-from-local)
+sudoku.py:50:4: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+sudoku.py:61:20: C0103: Variable name "l" doesn't conform to snake_case naming style (invalid-name)
+sudoku.py:48:4: W0612: Unused variable 'temp1' (unused-variable)
+sudoku.py:49:4: W0612: Unused variable 'temp2' (unused-variable)
+sudoku.py:77:4: W0622: Redefining built-in 'str' (redefined-builtin)
+sudoku.py:81:8: W0612: Unused variable 'i' (unused-variable)
 
-------------------------------------------------------------------
-Your code has been rated at 0.00/10 (previous run: 0.40/10, -0.40)
+-------------------------------------------------------------------
+Your code has been rated at 6.23/10 (previous run: -0.38/10, +6.61)
 
